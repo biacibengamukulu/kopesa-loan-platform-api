@@ -1,0 +1,30 @@
+
+[API Send email]
+curl -X POST "https://cloudcalls.easipath.com/backend-email-service/api/v1/send-email" \
+-H "Content-Type: application/json" \
+-d '{
+"from": "no-reply@mails.biacibenga.co.za",
+"receiver": [
+"sabata@sabata.co.za",
+"sabata@joxicraft.co.za"
+"biangacila@gmail.com",
+"backend@joxicraft.co.za"
+],
+"subject": "Welcome to our platform - Biacibenga email service",
+"html": "<h1>Welcome!</h1><p>Your account has been created successfully.</p>",
+"status": "PENDING",
+"retries": 0
+}'
+
+
+[API Send Sms Post]
+curl -X POST "https://cloudcalls.easipath.com/backend-email-service/api/v1/send-sms/post" \
+-H "Content-Type: application/json" \
+-d '{"phone":"27782900808","message":"Welcome to our platform - Liqiuor KZN sms service"}'
+
+Response: {"status":"sent successfully"}
+
+[API Send Sms Get]
+curl -X GET "https://cloudcalls.easipath.com/backend-email-service/api/v1/send-sms/get?phone=27684011702&message=Welcome%20to%20our%20platform%20-%20Biacibenga%20sms%20service%20GET%20Query%20string"
+
+Response: {"status":"sent successfully"}

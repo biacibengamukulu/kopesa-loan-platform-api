@@ -1,0 +1,9 @@
+.git
+.gitignore
+.idea
+.cache
+.bin
+.codex
+documents
+skills
+*.log

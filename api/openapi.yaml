@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Kopesa Loan Platform API
+  version: 1.0.0
+servers:
+  - url: https://cloudcalls.easipath.com/backend-kopesa/api/v1
+paths:
+  /auth/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+      responses:
+        "200":
+          description: OK
+  /auth/me:
+    get:
+      summary: Current user
+      responses:
+        "200":
+          description: OK
+  /loans:
+    get:
+      summary: List loans
+      responses:
+        "200":
+          description: OK
+  /loans/applications:
+    get:
+      summary: List applications
+      responses:
+        "200":
+          description: OK
+    post:
+      summary: Create application
+      responses:
+        "201":
+          description: Created
+  /arrears/cases:
+    get:
+      summary: List arrears cases
+      responses:
+        "200":
+          description: OK
+  /campaigns:
+    get:
+      summary: List campaigns
+      responses:
+        "200":
+          description: OK
+    post:
+      summary: Create campaign
+      responses:
+        "201":
+          description: Created
+  /messaging/send:
+    post:
+      summary: Queue a message
+      responses:
+        "202":
+          description: Accepted
+  /attachments/presign:
+    post:
+      summary: Request upload URL
+      responses:
+        "200":
+          description: OK
+  /reports/exec/overview:
+    get:
+      summary: Executive overview
+      responses:
+        "200":
+          description: OK
